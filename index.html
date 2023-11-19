@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Tracker</title>
+  <link rel="stylesheet" href="https://chiefwoods.github.io/footer-template/template.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="submit.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Exercise Tracker</h1>
+    <hr>
+    <div>
+      <form action="api/users" method="POST">
+        <h2>Create A New User</h2>
+        <code>POST /api/users</code>
+        <input type="text" name="username" placeholder="username">
+        <button type="submit">Create</button>
+      </form>
+      <form id="add-exercise">
+        <h2>Add Exercises</h2>
+        <code>POST /api/users/:_id/exercises</code>
+        <input type="text" name="id" placeholder="id*">
+        <input type="text" name="description" placeholder="description*">
+        <input type="number" name="duration" placeholder="duration* (mins)">
+        <input type="date" name="date">
+        <button type="submit">Add</button>
+      </form>
+      <form id="retrieve-exercise">
+        <h2>Retrieve Exercise Log</h2>
+        <code>GET /api/users/:_id/logs?[from][&to][&limit]</code>
+        <p><b>[ ]</b> = optional</p>
+        <p><b>from, to</b> = dates (yyyy-mm-dd); <b>limit</b> = number</p>
+        <input type="text" name="id" placeholder="id*">
+        <input type="date" name="from">
+        <input type="date" name="to">
+        <input type="number" name="limit" placeholder="limit">
+        <button type="submit">Retrieve</button>
+      </form>
+      <form action="api/users" method="GET">
+        <h2>Get All Users</h2>
+        <code>GET /api/users</code>
+        <button type="submit">Get</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <span class="made-by">Copyright @
+      <script>document.write(new Date().getFullYear())</script> ChiefWoods
+    </span>
+    <a class="github-link" href="https://github.com/ChiefWoods/exercise-tracker" target="_blank">
+      <img src="./icons/github.svg" class="github-icon" alt="GitHub">
+    </a>
+  </footer>
+</body>
+
+</html>
