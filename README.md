@@ -4,7 +4,7 @@
 
 Exercise tracker for Back End Development and APIs in [freeCodeCamp](https://www.freecodecamp.org/learn/).
 
-[Live Website](https://exercise-tracker.chiefwoods.repl.co/)
+[Live Website](https://exercise-tracker-chiefwoods.replit.app/)
 
 [Source Repository](https://github.com/ChiefWoods/exercise-tracker)
 
@@ -48,6 +48,10 @@ git clone https://github.com/ChiefWoods/exercise-tracker.git
 2. Install all dependencies
 ```
 npm install
+```
+3. Start development server
+```
+npm run start
 ```
 
 ## Issues
